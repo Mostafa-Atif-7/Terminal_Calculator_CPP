@@ -41,7 +41,7 @@ int main()
 {
     for(;;)
     {
-    std::cout<<i<<"|calculator ( + , - , * , / , % ):\n";
+    std::cout<<i<<"|calculator (+,-,*,/,%):\n";
     i++;
     std::cin>>num1;
     std::cin>>sign;
