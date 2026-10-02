@@ -1,0 +1,82 @@
+#include<iostream>
+#include<string>
+void sum_(int num1,int num2)
+{
+    std::cout<<num1<<"+"<<num2<<"="<<num1+num2<<"\n";
+    std::cout<<"___________________\n";
+}
+void sub_(int num1,int num2)
+{
+    std::cout<<num1<<"-"<<num2<<"="<<num1-num2<<"\n";
+    std::cout<<"___________________\n";
+}
+void multi_(int num1,int num2)
+{
+    std::cout<<num1<<"*"<<num2<<"="<<num1*num2<<"\n";
+    std::cout<<"___________________\n";
+}
+void div_(float num1,float num2)
+{
+    std::cout<<num1<<"/"<<num2<<"="<<num1/num2<<"\n";
+    std::cout<<"___________________\n";
+}
+void mod_(int num1,int num2)
+{
+    std::cout<<num1<<"%"<<num2<<"="<<num1%num2<<"\n";
+    std::cout<<"___________________\n";
+}
+void reset()
+{
+    std::cin.clear();
+    std::cin.ignore(123,'\n');
+    std::cout<<"error!\n";
+    std::cout<<"___________________\n";
+    
+}
+    int num1;
+    int num2;
+    char sign;
+    int i=1;
+int main()
+{
+    for(;;)
+    {
+    std::cout<<i<<"|calculator ( + , - , * , / , % ):\n";
+    i++;
+    std::cin>>num1;
+    std::cin>>sign;
+    std::cin>>num2;
+    if(!std::cin>>num1||!std::cin>>num2)
+    {
+        reset();
+    }
+    else
+    {
+        switch(sign)
+        {
+            case '+':
+            sum_(num1,num2);
+            break;
+            case '-':
+            sub_(num1,num2);
+            break;
+            case '*':
+            multi_(num1,num2);
+            break;
+            case '/':
+            div_(num1,num2);
+            break;
+            case '%':
+            mod_(num1,num2);
+            break;
+            default:
+            std::cout<<"error!\n";
+            std::cout<<"___________________\n";
+            break;
+        }
+    }
+        std::cin.clear();
+        system("clear");
+    }
+    return 0;
+}
